@@ -1,5 +1,4 @@
-
-    /* Reset dei margini e padding */
+* Reset dei margini e padding */
     * {
         margin: 0;
         padding: 0;
@@ -23,14 +22,14 @@
 
     nav ul {
         list-style-type: none;
-        text-align: center;
         padding: 10px 0;
         display: flex;
         justify-content: center;
+        flex-direction: row; /* Orizzontale per desktop */
+        margin: 0;
     }
 
     nav ul li {
-        display: inline;
         margin: 0 20px;
     }
 
@@ -44,20 +43,8 @@
         text-decoration: underline;
     }
 
-    /* Menu mobile - nascosto di default */
-    .mobile-menu {
-        display: none;
-    }
-
-    /* Aggiungi la visualizzazione del menu quando è attivo */
-    .mobile-menu.active {
-        display: block;
-        width: 100%;
-        text-align: center;
-    }
-
-    /* Menu hamburger */
-    .hamburger {
+    /* Bottone hamburger */
+    .hamburger, .close {
         display: none;
         font-size: 30px;
         color: white;
@@ -65,16 +52,36 @@
         padding: 10px;
     }
 
-    /* Mostra il bottone hamburger su dispositivi mobili */
+    /* Menu mobile - inizialmente nascosto */
     @media (max-width: 768px) {
         nav ul {
-            display: none;
+            display: none; /* Nascosto inizialmente su dispositivi mobili */
             width: 100%;
-            flex-direction: column;
+            flex-direction: column; /* Imposta il menu in verticale su dispositivi mobili */
+            position: fixed;
+            top: 50px; /* Spazio per il pulsante hamburger */
+            left: 0;
+            background-color: #333;
+            padding-top: 50px; /* Distanza dal bordo superiore */
+            z-index: 999; /* Si sovrappone al contenuto, ma non ai pulsanti */
         }
 
         .hamburger {
-            display: block;
+            display: block; /* Mostra il bottone hamburger su dispositivi mobili */
+        }
+
+        .close {
+            display: block; /* Mostra la X (per chiudere il menu) */
+        }
+
+        /* Mostra il menu quando è attivo */
+        .mobile-menu.active {
+            display: flex;
+        }
+
+        /* Quando il menu è attivo, fa spazio al contenuto della pagina */
+        body.active-menu {
+            overflow: hidden;
         }
     }
 
