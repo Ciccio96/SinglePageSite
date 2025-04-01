@@ -1,0 +1,25 @@
+# Ignora i file di sistema
+.DS_Store
+Thumbs.db
+
+# Ignora i file di log
+*.log
+
+# Ignora i file di backup
+*.bak
+*.swp
+
+# Ignora le cartelle di configurazione degli editor
+.vscode/
+.idea/
+
+# Ignora la cartella di dipendenze di Node.js
+node_modules/
+
+# Ignora i file di ambiente di Python
+*.pyc
+*.pyo
+__pycache__/
+
+# Ignora i file temporanei
+*.tmp
