@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nome del Gruppo</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Intestazione -->
+    <header>
+        <div class="logo">
+            <img src="logo.png" alt="Logo Gruppo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#bio">Biografia</a></li>
+                <li><a href="#musica">Musica</a></li>
+                <li><a href="#tour">Tour</a></li>
+                <li><a href="#contatti">Contatti</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Biografia -->
+    <section id="bio">
+        <h2>La Storia del Gruppo</h2>
+        <p>Testo biografia del gruppo...</p>
+    </section>
+
+    <!-- Musica -->
+    <section id="musica">
+        <h2>Ascolta la Musica</h2>
+        <!-- Inserisci player o link a Spotify/SoundCloud -->
+        <iframe src="https://www.youtube.com/embed/video_id" frameborder="0" allowfullscreen></iframe>
+    </section>
+
+    <!-- Tour -->
+    <section id="tour">
+        <h2>Prossimi Concerti</h2>
+        <ul>
+            <li>Data, Location</li>
+            <li>Data, Location</li>
+        </ul>
+    </section>
+
+    <!-- Contatti -->
+    <section id="contatti">
+        <h2>Contattaci</h2>
+        <form action="submit_form.php" method="POST">
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email">
+            <textarea id="messaggio" name="messaggio" placeholder="Scrivi il tuo messaggio"></textarea>
+            <button type="submit">Invia</button>
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2025 Nome del Gruppo</p>
+        <div class="social">
+            <a href="https://www.instagram.com/gruppo">Instagram</a>
+            <a href="https://www.facebook.com/gruppo">Facebook</a>
+        </div>
+    </footer>
+    
+    <script src="script.js"></script>
+</body>
+</html>
