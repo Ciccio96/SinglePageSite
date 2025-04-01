@@ -1,75 +1,111 @@
 
-/* Reset dei margini e padding */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+    /* Reset dei margini e padding */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
 
-/* Corpo della pagina */
-body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-}
+    /* Corpo della pagina */
+    body {
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+    }
 
-/* Sezione di navigazione */
-nav {
-    background-color: #333;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 1000;
-}
+    /* Sezione di navigazione */
+    nav {
+        background-color: #333;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 1000;
+    }
 
-nav ul {
-    list-style-type: none;
-    text-align: center;
-    padding: 10px 0;
-}
+    nav ul {
+        list-style-type: none;
+        text-align: center;
+        padding: 10px 0;
+        display: flex;
+        justify-content: center;
+    }
 
-nav ul li {
-    display: inline;
-    margin: 0 20px;
-}
+    nav ul li {
+        display: inline;
+        margin: 0 20px;
+    }
 
-nav ul li a {
-    color: white;
-    text-decoration: none;
-    font-size: 18px;
-}
+    nav ul li a {
+        color: white;
+        text-decoration: none;
+        font-size: 18px;
+    }
 
-nav ul li a:hover {
-    text-decoration: underline;
-}
+    nav ul li a:hover {
+        text-decoration: underline;
+    }
 
-/* Sezione di contenuto */
-section {
-    padding: 100px 20px;
-    min-height: 100vh;
-    text-align: center;
-}
+    /* Menu mobile - nascosto di default */
+    .mobile-menu {
+        display: none;
+    }
 
-section:nth-child(even) {
-    background-color: #f4f4f4;
-}
+    /* Aggiungi la visualizzazione del menu quando è attivo */
+    .mobile-menu.active {
+        display: block;
+        width: 100%;
+        text-align: center;
+    }
 
-section h2 {
-    font-size: 36px;
-    margin-bottom: 20px;
-}
+    /* Menu hamburger */
+    .hamburger {
+        display: none;
+        font-size: 30px;
+        color: white;
+        cursor: pointer;
+        padding: 10px;
+    }
 
-section p {
-    font-size: 18px;
-    color: #555;
-}
+    /* Mostra il bottone hamburger su dispositivi mobili */
+    @media (max-width: 768px) {
+        nav ul {
+            display: none;
+            width: 100%;
+            flex-direction: column;
+        }
 
-/* Footer */
-footer {
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 10px;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-}
+        .hamburger {
+            display: block;
+        }
+    }
+
+    /* Sezione di contenuto */
+    section {
+        padding: 100px 20px;
+        min-height: 100vh;
+        text-align: center;
+    }
+
+    section:nth-child(even) {
+        background-color: #f4f4f4;
+    }
+
+    section h2 {
+        font-size: 36px;
+        margin-bottom: 20px;
+    }
+
+    section p {
+        font-size: 18px;
+        color: #555;
+    }
+
+    /* Footer */
+    footer {
+        background-color: #333;
+        color: white;
+        text-align: center;
+        padding: 10px;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+    }
